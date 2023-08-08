@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-const port = process.env.PORT || 5001
+const port = process.env.PORT || 5000
 require('dotenv').config();
 var cors = require('cors')
 
@@ -23,7 +23,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
-console.log('hitting')
+console.log('hittinsunnyg')
 
 
 
@@ -95,7 +95,7 @@ async function run() {
 run().catch(console.dir)
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World sunny!');
 });
 
 app.listen(port, () => {
